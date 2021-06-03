@@ -158,7 +158,7 @@ namespace CRUD_Clientes2
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtEndereco.Text == "" || txtTelefone.Text == "")
+            if (txtNome.Text == "" || txtEndereco.Text == "")
             {
                 MessageBox.Show("Há algum campo vazio, favor preencher todos os campos!");
                 return;
@@ -202,7 +202,7 @@ namespace CRUD_Clientes2
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
-            if (txtEndereco.Text != "" && txtNome.Text != "" && txtTelefone.Text != "")
+            if (txtEndereco.Text != "" && txtNome.Text != "")
             {
                 btnLimpar.Visible = true;
                 tbnSalvar.Visible = true;
@@ -216,7 +216,7 @@ namespace CRUD_Clientes2
 
         private void txtEndereco_TextChanged(object sender, EventArgs e)
         {
-            if(txtEndereco.Text != "" && txtNome.Text != "" && txtTelefone.Text != "")
+            if(txtEndereco.Text != "" && txtNome.Text != "")
             {
                 btnLimpar.Visible = true;
                 tbnSalvar.Visible = true;
@@ -231,6 +231,7 @@ namespace CRUD_Clientes2
         private void txtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             MessageBox.Show("Numero máximo de caracteres atingido ou foi digitado algum caractere diferente de número.");
+            return;
         }
     }
 }
