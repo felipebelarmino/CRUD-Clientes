@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CRUD_Clientes2
@@ -95,19 +89,15 @@ namespace CRUD_Clientes2
        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Retorna o indice da linha no qual a célula foi clicada
             _linhaIndice = e.RowIndex;
 
-            //Se _linhaIndice é menor que -1 então retorna
             if (_linhaIndice == -1)
             {
                 return;
             }
-
-            //Cria um objeto DataGridViewRow de um indice particular
+            
             DataGridViewRow rowData = dataGridView1.Rows[_linhaIndice];
 
-            //exibe os valores no textbox
             _clientId = rowData.Cells[0].Value.ToString();
             _clientName = rowData.Cells[1].Value.ToString();
             txtNome.Text = rowData.Cells[1].Value.ToString();
