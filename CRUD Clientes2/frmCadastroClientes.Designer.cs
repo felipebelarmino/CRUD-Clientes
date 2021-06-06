@@ -1,7 +1,7 @@
 ﻿
 namespace CRUD_Clientes2
 {
-    partial class Form1
+    partial class frmCadastroClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,61 +30,61 @@ namespace CRUD_Clientes2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroClientes));
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.clientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sQLTestDataSet = new CRUD_Clientes2.SQLTestDataSet();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpClienteInfo = new System.Windows.Forms.GroupBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.tbnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Nome = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpBusca = new System.Windows.Forms.GroupBox();
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNomeBusca = new System.Windows.Forms.Label();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.clientsTableAdapter = new CRUD_Clientes2.SQLTestDataSetTableAdapters.ClientsTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblSubTitulo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLTestDataSet)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grpClienteInfo.SuspendLayout();
+            this.grpBusca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewClientes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewClientes.AllowUserToAddRows = false;
+            this.dataGridViewClientes.AllowUserToDeleteRows = false;
+            this.dataGridViewClientes.AutoGenerateColumns = false;
+            this.dataGridViewClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clientIDDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.clientsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 305);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 399);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewClientes.DataSource = this.clientsBindingSource;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(12, 305);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.ReadOnly = true;
+            this.dataGridViewClientes.Size = new System.Drawing.Size(664, 399);
+            this.dataGridViewClientes.TabIndex = 0;
+            this.dataGridViewClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // clientIDDataGridViewTextBoxColumn
             // 
@@ -127,24 +127,24 @@ namespace CRUD_Clientes2
             this.sQLTestDataSet.DataSetName = "SQLTestDataSet";
             this.sQLTestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // groupBox1
+            // grpClienteInfo
             // 
-            this.groupBox1.Controls.Add(this.btnLimpar);
-            this.groupBox1.Controls.Add(this.tbnSalvar);
-            this.groupBox1.Controls.Add(this.btnExcluir);
-            this.groupBox1.Controls.Add(this.btnAlterar);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Nome);
-            this.groupBox1.Controls.Add(this.txtEndereco);
-            this.groupBox1.Controls.Add(this.txtTelefone);
-            this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Location = new System.Drawing.Point(12, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(664, 151);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cliente";
+            this.grpClienteInfo.Controls.Add(this.btnLimpar);
+            this.grpClienteInfo.Controls.Add(this.tbnSalvar);
+            this.grpClienteInfo.Controls.Add(this.btnExcluir);
+            this.grpClienteInfo.Controls.Add(this.btnAlterar);
+            this.grpClienteInfo.Controls.Add(this.lblEndereco);
+            this.grpClienteInfo.Controls.Add(this.lblTelefone);
+            this.grpClienteInfo.Controls.Add(this.lblNome);
+            this.grpClienteInfo.Controls.Add(this.txtEndereco);
+            this.grpClienteInfo.Controls.Add(this.txtTelefone);
+            this.grpClienteInfo.Controls.Add(this.txtNome);
+            this.grpClienteInfo.Location = new System.Drawing.Point(12, 72);
+            this.grpClienteInfo.Name = "grpClienteInfo";
+            this.grpClienteInfo.Size = new System.Drawing.Size(664, 151);
+            this.grpClienteInfo.TabIndex = 1;
+            this.grpClienteInfo.TabStop = false;
+            this.grpClienteInfo.Text = "Cliente";
             // 
             // btnLimpar
             // 
@@ -195,35 +195,35 @@ namespace CRUD_Clientes2
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // label2
+            // lblEndereco
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Endereço";
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.Location = new System.Drawing.Point(15, 79);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(69, 17);
+            this.lblEndereco.TabIndex = 3;
+            this.lblEndereco.Text = "Endereço";
             // 
-            // label1
+            // lblTelefone
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(470, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Telefone";
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.Location = new System.Drawing.Point(470, 38);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(64, 17);
+            this.lblTelefone.TabIndex = 3;
+            this.lblTelefone.Text = "Telefone";
             // 
-            // Nome
+            // lblNome
             // 
-            this.Nome.AutoSize = true;
-            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.Location = new System.Drawing.Point(39, 38);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(45, 17);
-            this.Nome.TabIndex = 3;
-            this.Nome.Text = "Nome";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(39, 38);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(45, 17);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "Nome";
             // 
             // txtEndereco
             // 
@@ -250,18 +250,18 @@ namespace CRUD_Clientes2
             this.txtNome.TabIndex = 0;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
-            // groupBox2
+            // grpBusca
             // 
-            this.groupBox2.Controls.Add(this.btnBuscarTodos);
-            this.groupBox2.Controls.Add(this.btnBuscar);
-            this.groupBox2.Controls.Add(this.txtBusca);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 229);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(664, 70);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Busca";
+            this.grpBusca.Controls.Add(this.btnBuscarTodos);
+            this.grpBusca.Controls.Add(this.btnBuscar);
+            this.grpBusca.Controls.Add(this.txtBusca);
+            this.grpBusca.Controls.Add(this.lblNomeBusca);
+            this.grpBusca.Location = new System.Drawing.Point(12, 229);
+            this.grpBusca.Name = "grpBusca";
+            this.grpBusca.Size = new System.Drawing.Size(664, 70);
+            this.grpBusca.TabIndex = 2;
+            this.grpBusca.TabStop = false;
+            this.grpBusca.Text = "Busca";
             // 
             // btnBuscarTodos
             // 
@@ -294,74 +294,74 @@ namespace CRUD_Clientes2
             this.txtBusca.TabIndex = 1;
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
-            // label3
+            // lblNomeBusca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nome";
+            this.lblNomeBusca.AutoSize = true;
+            this.lblNomeBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeBusca.Location = new System.Drawing.Point(39, 29);
+            this.lblNomeBusca.Name = "lblNomeBusca";
+            this.lblNomeBusca.Size = new System.Drawing.Size(45, 17);
+            this.lblNomeBusca.TabIndex = 0;
+            this.lblNomeBusca.Text = "Nome";
             // 
-            // pictureBox1
+            // imgLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(581, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
+            this.imgLogo.Location = new System.Drawing.Point(581, 12);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(95, 54);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogo.TabIndex = 3;
+            this.imgLogo.TabStop = false;
             // 
-            // label4
+            // lblTitulo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(7, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(494, 29);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Sistema de gerenciamento de usuários - Custom DPSP";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblTitulo.Location = new System.Drawing.Point(7, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(494, 29);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Sistema de gerenciamento de usuários - Custom DPSP";
             // 
             // clientsTableAdapter
             // 
             this.clientsTableAdapter.ClearBeforeFill = true;
             // 
-            // label5
+            // lblSubTitulo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8F);
-            this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(12, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 14);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Autor: Felipe Gomes Belarmino";
+            this.lblSubTitulo.AutoSize = true;
+            this.lblSubTitulo.Font = new System.Drawing.Font("Arial", 8F);
+            this.lblSubTitulo.ForeColor = System.Drawing.Color.Teal;
+            this.lblSubTitulo.Location = new System.Drawing.Point(12, 41);
+            this.lblSubTitulo.Name = "lblSubTitulo";
+            this.lblSubTitulo.Size = new System.Drawing.Size(155, 14);
+            this.lblSubTitulo.TabIndex = 3;
+            this.lblSubTitulo.Text = "Autor: Felipe Gomes Belarmino";
             // 
-            // Form1
+            // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 716);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.imgLogo);
+            this.Controls.Add(this.grpBusca);
+            this.Controls.Add(this.grpClienteInfo);
+            this.Controls.Add(this.dataGridViewClientes);
+            this.Controls.Add(this.lblSubTitulo);
+            this.Controls.Add(this.lblTitulo);
+            this.Name = "frmCadastroClientes";
+            this.Text = "Cadastro de clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLTestDataSet)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grpClienteInfo.ResumeLayout(false);
+            this.grpClienteInfo.PerformLayout();
+            this.grpBusca.ResumeLayout(false);
+            this.grpBusca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,11 +369,11 @@ namespace CRUD_Clientes2
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewClientes;
         private SQLTestDataSet sQLTestDataSet;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private SQLTestDataSetTableAdapters.ClientsTableAdapter clientsTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpClienteInfo;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
@@ -381,21 +381,21 @@ namespace CRUD_Clientes2
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label Nome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Button tbnSalvar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpBusca;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNomeBusca;
+        private System.Windows.Forms.PictureBox imgLogo;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnBuscarTodos;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSubTitulo;
     }
 }
 

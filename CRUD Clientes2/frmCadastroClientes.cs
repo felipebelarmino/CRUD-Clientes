@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace CRUD_Clientes2
 {
-    public partial class Form1 : Form
+    public partial class frmCadastroClientes : Form
     {
-        public Form1()
+        public frmCadastroClientes()
         {
             InitializeComponent();
             btnAlterar.Visible = false;
@@ -26,13 +26,13 @@ namespace CRUD_Clientes2
         string _clientName;
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             this.clientsTableAdapter.Fill(this.sQLTestDataSet.Clients);
         }
 
         private void tbnSalvar_Click(object sender, EventArgs e)
         {
-            if(!txtTelefone.MaskCompleted)
+            if (!txtTelefone.MaskCompleted)
             {
                 MessageBox.Show("Preencha o campo telefone corretamente.");
                 return;
@@ -67,7 +67,7 @@ namespace CRUD_Clientes2
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {            
+        {
             if (txtBusca.Text != "")
             {
                 clientsTableAdapter.FillByName(sQLTestDataSet.Clients, txtBusca.Text);
@@ -85,28 +85,6 @@ namespace CRUD_Clientes2
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
             clientsTableAdapter.Fill(sQLTestDataSet.Clients);
-        }
-       
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _linhaIndice = e.RowIndex;
-
-            if (_linhaIndice == -1)
-            {
-                return;
-            }
-            
-            DataGridViewRow rowData = dataGridView1.Rows[_linhaIndice];
-
-            _clientId = rowData.Cells[0].Value.ToString();
-            _clientName = rowData.Cells[1].Value.ToString();
-            txtNome.Text = rowData.Cells[1].Value.ToString();
-            txtTelefone.Text = rowData.Cells[2].Value.ToString();
-            txtEndereco.Text = rowData.Cells[3].Value.ToString();
-
-            btnExcluir.Visible = true;
-            btnAlterar.Visible = true;
-            tbnSalvar.Visible = false;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -138,7 +116,7 @@ namespace CRUD_Clientes2
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cliente: " + _clientName + ", excluído!");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -216,22 +194,44 @@ namespace CRUD_Clientes2
 
         private void txtEndereco_TextChanged(object sender, EventArgs e)
         {
-            if(txtEndereco.Text != "" && txtNome.Text != "")
+            if (txtEndereco.Text != "" && txtNome.Text != "")
             {
                 btnLimpar.Visible = true;
                 tbnSalvar.Visible = true;
-            } 
+            }
             else
             {
                 btnLimpar.Visible = false;
                 tbnSalvar.Visible = false;
             }
-        }   
+        }
 
         private void txtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             MessageBox.Show("Numero máximo de caracteres atingido ou foi digitado algum caractere diferente de número.");
             return;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _linhaIndice = e.RowIndex;
+
+            if (_linhaIndice == -1)
+            {
+                return;
+            }
+
+            DataGridViewRow rowData = dataGridViewClientes.Rows[_linhaIndice];
+
+            _clientId = rowData.Cells[0].Value.ToString();
+            _clientName = rowData.Cells[1].Value.ToString();
+            txtNome.Text = rowData.Cells[1].Value.ToString();
+            txtTelefone.Text = rowData.Cells[2].Value.ToString();
+            txtEndereco.Text = rowData.Cells[3].Value.ToString();
+
+            btnExcluir.Visible = true;
+            btnAlterar.Visible = true;
+            tbnSalvar.Visible = false;
         }
     }
 }
