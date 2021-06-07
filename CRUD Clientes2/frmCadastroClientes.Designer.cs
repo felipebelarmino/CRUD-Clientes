@@ -307,9 +307,9 @@ namespace CRUD_Clientes2
             // imgLogo
             // 
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(581, 12);
+            this.imgLogo.Location = new System.Drawing.Point(507, 12);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(95, 54);
+            this.imgLogo.Size = new System.Drawing.Size(169, 54);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogo.TabIndex = 3;
             this.imgLogo.TabStop = false;
@@ -352,7 +352,7 @@ namespace CRUD_Clientes2
             this.Controls.Add(this.lblSubTitulo);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmCadastroClientes";
-            this.Text = "Cadastro de clientes";
+            this.Text = "Cadastro de clientes - DPSP";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();

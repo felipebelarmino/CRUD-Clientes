@@ -32,10 +32,25 @@ namespace CRUD_Clientes2
 
         private void tbnSalvar_Click(object sender, EventArgs e)
         {
-            if (!txtTelefone.MaskCompleted)
+            if (!txtTelefone.MaskCompleted && txtNome.Text != "" && txtEndereco.Text != "")
             {
-                MessageBox.Show("Preencha o campo telefone corretamente.");
+                MessageBox.Show("Campo telefone com preenchimento incorreto.");
                 return;
+            }
+
+            if (txtNome.Text == "" && txtEndereco.Text != "")
+            {
+                MessageBox.Show("Favor preencher o campo nome.");
+            }
+
+            if (txtNome.Text != "" && txtEndereco.Text == "")
+            {
+                MessageBox.Show("Favor preencher o campo endereço.");
+            }
+
+            if (txtNome.Text == "" && txtEndereco.Text == "")
+            {
+                MessageBox.Show("Favor preencher os campos nome e endereço.");
             }
 
             strSql = "insert into Clients (Nome, Telefone, Endereco) values (@Nome, @Telefone, @Endereco)";
@@ -85,6 +100,8 @@ namespace CRUD_Clientes2
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
             clientsTableAdapter.Fill(sQLTestDataSet.Clients);
+            txtBusca.Text = "";
+            btnLimpar.Visible = false;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -92,9 +109,10 @@ namespace CRUD_Clientes2
             txtNome.Text = "";
             txtTelefone.Text = "";
             txtEndereco.Text = "";
+            txtBusca.Text = "";
             btnAlterar.Visible = false;
             btnExcluir.Visible = false;
-            tbnSalvar.Visible = true;
+            tbnSalvar.Visible = false;
             btnLimpar.Visible = false;
         }
 
@@ -169,7 +187,7 @@ namespace CRUD_Clientes2
             txtTelefone.Text = "";
             txtEndereco.Text = "";
             clientsTableAdapter.Fill(sQLTestDataSet.Clients);
-            tbnSalvar.Visible = true;
+            tbnSalvar.Visible = false;
             btnAlterar.Visible = false;
             btnExcluir.Visible = false;
             txtNome.Text = "";
