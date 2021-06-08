@@ -120,6 +120,8 @@ namespace CRUD_Clientes2
             btnExcluir.Visible = false;
             tbnSalvar.Visible = false;
             btnLimpar.Visible = false;
+
+            phonesTableAdapter.FillByClientFK(sQL_TestDataSet.Phones, -1);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -159,6 +161,8 @@ namespace CRUD_Clientes2
             txtTelefone.Text = "";
             txtEndereco.Text = "";
             clientsTableAdapter.Fill(sQLTestDataSet.Clients);
+
+            phonesTableAdapter.FillByClientFK(sQL_TestDataSet.Phones, Int32.Parse(_clientId));
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
