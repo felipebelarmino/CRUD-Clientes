@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +61,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQLTestDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SQL_TestDataSet.cs">
+      <DependentUpon>SQL_TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_TestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQL_TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCadastroClientes.pt-BR.resx">
+      <DependentUpon>frmCadastroClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +103,17 @@
     </None>
     <None Include="SQLTestDataSet.xss">
       <DependentUpon>SQLTestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_TestDataSet.xsc">
+      <DependentUpon>SQL_TestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_TestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQL_TestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQL_TestDataSet.xss">
+      <DependentUpon>SQL_TestDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
