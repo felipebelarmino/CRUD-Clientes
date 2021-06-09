@@ -268,10 +268,13 @@ namespace CRUD_Clientes2
 
             phonesTableAdapter.FillByClientFK(sQL_TestDataSet.Phones, Int32.Parse(_clientId));
 
-            if (dataGridViewTelefones.Rows.Count < 1 || dataGridViewTelefones.Rows == null)
-            {                
-                return;
-            }           
+            if (dataGridViewTelefones.Rows.Count > 1 || dataGridViewTelefones.Rows == null)
+            {
+                btnExcluirTodosTelefones.Visible = true;
+            } else
+            {
+                btnExcluirTodosTelefones.Visible = false;
+            }
         }
 
         private void dataGridViewTelefones_CellClick(object sender, DataGridViewCellEventArgs e)
